@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Inter;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Inter-Bold.eot');
+  src:
+    url('assets/fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Inter-Bold.woff2') format('woff2'),
+    url('assets/fonts/Inter-Bold.woff') format('woff'),
+    url('assets/fonts/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Inter-Light.eot');
+  src:
+    url('assets/fonts/Inter-Light.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Inter-Light.woff2') format('woff2'),
+    url('assets/fonts/Inter-Light.woff') format('woff'),
+    url('assets/fonts/Inter-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Inter-Medium.eot');
+  src:
+    url('assets/fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Inter-Medium.woff2') format('woff2'),
+    url('assets/fonts/Inter-Medium.woff') format('woff'),
+    url('assets/fonts/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Inter-Regular.eot');
+  src:
+    url('assets/fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Inter-Regular.woff2') format('woff2'),
+    url('assets/fonts/Inter-Regular.woff') format('woff'),
+    url('assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Inter-SemiBold.eot');
+  src:
+    url('assets/fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Inter-SemiBold.woff2') format('woff2'),
+    url('assets/fonts/Inter-SemiBold.woff') format('woff'),
+    url('assets/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Coolvetica Rg';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/CoolveticaRg-Regular.eot');
+  src:
+    url('assets/fonts/CoolveticaRg-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('assets/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
+    url('assets/fonts/CoolveticaRg-Regular.woff') format('woff'),
+    url('assets/fonts/CoolveticaRg-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Coolvetica Rg';
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+  src: url('assets/fonts/CoolveticaRg-Italic.eot');
+  src:
+    url('assets/fonts/CoolveticaRg-Italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('assets/fonts/CoolveticaRg-Italic.woff2') format('woff2'),
+    url('assets/fonts/CoolveticaRg-Italic.woff') format('woff'),
+    url('assets/fonts/CoolveticaRg-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+body {
+  @mixin light {
+    /* background-color: var(--mantine-color-dark-1); */
+  }
+}
+
+.mantine-Container-root {
+  width: 100%;
+  max-width: rem(375px);
+  padding: 0 rem(20px);
+
+  @media (min-width: em(768px)) {
+    max-width: rem(768px);
+    padding: 0 rem(32px);
+  }
+
+  @media (min-width: em(1440px)) {
+    max-width: rem(1440px);
+  }
+}
+
+.mantine-Popover-dropdown:has(> div[data-calendar='true']) {
+  background-color: var(--mantine-color-blue-4);
+  border: 1px solid var(--mantine-color-blue-4);
+  border-radius: rem(16px);
+}

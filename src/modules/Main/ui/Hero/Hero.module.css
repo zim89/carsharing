@@ -1,0 +1,87 @@
+/* stylelint-disable media-query-no-invalid */
+.wrap {
+  padding-top: rem(120px);
+  padding-bottom: rem(120px);
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  width: rem(142px);
+  height: rem(142px);
+
+  @media (min-width: $mantine-breakpoint-md) {
+    width: rem(150px);
+    height: rem(149px);
+  }
+}
+
+.title {
+  font-size: rem(44px);
+  font-weight: 700;
+  line-height: 1.0909;
+  color: var(--mantine-color-white);
+  text-shadow:
+    0 rem(9.4px) rem(57.6875px) rgb(0 0 0 / 4%),
+    0 rem(47px) rem(355px) rgb(0 0 0 / 7%);
+
+  @media (min-width: $mantine-breakpoint-md) {
+    margin-bottom: rem(40px);
+    font-size: rem(100px);
+    line-height: 1.3;
+  }
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    font-size: rem(120px);
+    line-height: 1.25;
+  }
+}
+
+.title > span {
+  margin-right: 3px;
+  margin-left: -4px;
+  font-style: italic;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    margin-right: 5px;
+    margin-left: rem(-8px);
+  }
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    margin-right: 5px;
+    margin-left: rem(-9px);
+  }
+}
+
+.loginBtn {
+  font-size: rem(14px);
+  font-weight: 600;
+  line-height: 1.2857;
+  color: var(--mantine-color-blue-4);
+  letter-spacing: -0.28px;
+
+  background-color: var(--mantine-color-white);
+  box-shadow: 4px 2px 16px 0 rgb(136 165 191 / 48%);
+
+  transition: all 250ms ease-in-out;
+}
+
+.loginBtn svg {
+  transition: all 250ms ease-in-out;
+}
+
+.loginBtn:hover svg {
+  transform: scale(1.1);
+}
+
+.loginBtn:hover {
+  transform: scale(1.1);
+}
+
+.registerBtn {
+  font-size: rem(14px);
+  font-weight: 600;
+  line-height: 1.1667;
+  color: var(--mantine-color-white);
+  text-decoration: underline;
+}

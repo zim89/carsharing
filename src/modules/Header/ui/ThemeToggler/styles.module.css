@@ -1,0 +1,30 @@
+.icon {
+  width: rem(24px);
+  height: rem(24px);
+  color: var(--mantine-color-blue-4);
+
+  @media (min-width: $mantine-breakpoint-md) {
+    width: rem(32px);
+    height: rem(32px);
+  }
+}
+
+.dark {
+  @mixin dark {
+    display: none;
+  }
+
+  @mixin light {
+    display: block;
+  }
+}
+
+.light {
+  @mixin light {
+    display: none;
+  }
+
+  @mixin dark {
+    display: block;
+  }
+}
