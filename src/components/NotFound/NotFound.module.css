@@ -1,0 +1,34 @@
+/* stylelint-disable media-query-no-invalid */
+.root {
+  padding-top: rem(80px);
+  padding-bottom: rem(80px);
+}
+
+.title {
+  margin-bottom: var(--mantine-spacing-md);
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  font-size: rem(34px);
+  font-weight: 900;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: rem(32px);
+  }
+}
+
+.control {
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: 100%;
+  }
+}
+
+.mobileImage {
+  @media (width >= 48em) {
+    display: none;
+  }
+}
+
+.desktopImage {
+  @media (width <= 47.99em) {
+    display: none;
+  }
+}

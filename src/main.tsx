@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import { store, persistor } from './app/store.ts';
+import { store, persistor } from './app/redux/store.ts';
 
 import App from './app/App.tsx';
-import ScreenLoader from './shared/ui/ScreenLoader/ScreenLoader.tsx';
+import ScreenLoader from './components/ScreenLoader/ScreenLoader.tsx';
 
 import './global.css';
 

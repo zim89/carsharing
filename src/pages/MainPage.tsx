@@ -1,6 +1,4 @@
-import Hero from '@/modules/Main';
-
 const MainPage = () => {
-  return <Hero />;
+  return <h2>MainPage</h2>;
 };
 export default MainPage;

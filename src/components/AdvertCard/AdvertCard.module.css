@@ -1,0 +1,26 @@
+.model {
+  color: var(--mantine-color-blue-7);
+}
+
+.tag:not(:last-child) {
+  display: inline-block;
+  padding-right: 4px;
+  border-right: 1px solid var(--mantine-color-gray-4);
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+  color: #363535;
+
+  background: var(--mantine-color-gray-1);
+  border-radius: 16px;
+}
+
+.modalContent {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}

@@ -1,0 +1,48 @@
+/* stylelint-disable at-rule-no-unknown */
+.header {
+  position: fixed;
+  z-index: 10;
+
+  width: 100%;
+
+  background-color: var(--mantine-color-white);
+  border-bottom: 1px solid var(--mantine-color-gray-4);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.link {
+  @mixin hover {
+    color: var(--mantine-color-blue-filled);
+    background-color: var(--mantine-color-gray-0);
+
+    &.active {
+      color: var(--mantine-color-white);
+      background-color: var(--mantine-color-blue-filled);
+    }
+  }
+
+  display: block;
+
+  padding: rem(8px) rem(12px);
+
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--mantine-color-gray-7);
+  text-decoration: none;
+
+  border-radius: var(--mantine-radius-sm);
+}
+
+.active {
+  color: var(--mantine-color-white);
+  background-color: var(--mantine-color-blue-filled);
+}
