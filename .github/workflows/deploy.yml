@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  BASE_URL: ${{secrets.BASE_URL}}
+
 permissions:
   contents: read
   pages: write
