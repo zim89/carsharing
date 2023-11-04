@@ -13,7 +13,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@mantine/code-highlight": "^7.1.7",
     "@mantine/core": "^7.1.5",
+    "@mantine/ds": "^7.1.7",
     "@mantine/form": "^7.1.7",
     "@mantine/hooks": "^7.1.5",
     "@mantine/modals": "^7.1.5",

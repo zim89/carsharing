@@ -229,7 +229,13 @@ const AdvertCard: FC<Props> = ({ advert }) => {
           </Text>
         </Group>
 
-        <Button variant="filled" radius="md" px={50}>
+        <Button
+          component="a"
+          href="tel:+380676208888"
+          variant="filled"
+          radius="md"
+          px={50}
+        >
           Rental car
         </Button>
       </Modal>

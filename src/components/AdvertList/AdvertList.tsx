@@ -12,6 +12,7 @@ import {
   Stack,
   Select,
   Text,
+  LoadingOverlay,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useLayoutEffect, useState } from 'react';
@@ -27,6 +28,7 @@ import { Filter } from '@/app/redux/filter/filterSlice';
 import filterData from '@/helpers/filterData';
 import { fetchAdverts } from '@/shared/api/fetchAdverts';
 import css from './AdvertList.module.css';
+import { useDisclosure } from '@mantine/hooks';
 
 const optionsFilter: OptionsFilter = ({ options, search }) => {
   const filtered = (options as ComboboxItem[]).filter((option) =>
@@ -38,6 +40,7 @@ const optionsFilter: OptionsFilter = ({ options, search }) => {
 };
 
 const AdvertList = () => {
+  const [visible, { open, close }] = useDisclosure(false);
   const [page, setPage] = useState<number>(1);
   const [limit] = useState<number>(12);
   const [data, setData] = useState<Advert[]>([]);
@@ -47,10 +50,18 @@ const AdvertList = () => {
 
   useLayoutEffect(() => {
     (async () => {
-      const res: Advert[] =
-        (await fetchAdverts(getQueryString(page, limit))) ?? [];
-      setData((prev) => [...prev, ...res]);
+      try {
+        open();
+        const res: Advert[] =
+          (await fetchAdverts(getQueryString(page, limit))) ?? [];
+        setData((prev) => [...prev, ...res]);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        close();
+      }
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [limit, page]);
 
   const form = useForm({
@@ -170,7 +181,7 @@ const AdvertList = () => {
           </Button>
         </Group>
       </form>
-      <Box pb={100}>
+      <Box pb={100} pos={'relative'}>
         {!isFilter && (
           <SimpleGrid cols={4} mb={100}>
             {data.map((advert) => (
@@ -194,6 +205,11 @@ const AdvertList = () => {
             </Button>
           </Center>
         )}
+        <LoadingOverlay
+          visible={visible}
+          zIndex={1000}
+          overlayProps={{ radius: 'sm', blur: 2 }}
+        />
       </Box>
     </>
   );

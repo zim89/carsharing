@@ -1,9 +1,9 @@
-import { Container, Flex, Group, Burger, Image } from '@mantine/core';
+import { Container, Flex, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { MantineLogo } from '@mantine/ds';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 
-import logo from '@/assets/icons/logo.png';
 import css from './Header.module.css';
 
 const Header = () => {
@@ -18,9 +18,9 @@ const Header = () => {
           align="center"
           direction="row"
           wrap="wrap"
-          py={4}
+          py={12}
         >
-          <Image h={50} w="auto" src={logo} />
+          <MantineLogo size={34} />
           <Group gap={5} visibleFrom="xs" className={css.nav}>
             <NavLink
               className={({ isActive }) =>
