@@ -31,7 +31,6 @@ const AdvertList = () => {
         console.log(error);
       }
     })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [limit, page]);
 
   useEffect(() => {
